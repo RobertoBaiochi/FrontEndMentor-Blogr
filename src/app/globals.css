@@ -34,14 +34,19 @@ body {
 
 button {
   outline: transparent;
+  background: none;
+  border: none;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  background: none;
 }
 
 ol, ul {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}

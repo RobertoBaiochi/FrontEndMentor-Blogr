@@ -1,7 +1,7 @@
 import StyledComponentsRegistry from "@/lib/registry";
 import "./globals.css";
 import { Overpass } from "next/font/google";
-import { DefaultProviders } from "@/components/Providers/default-providers";
+import { DefaultProviders } from "@/Providers/default-providers";
 
 const overpass = Overpass({ weight: ["300", "600"], subsets: ["latin"] });
 
