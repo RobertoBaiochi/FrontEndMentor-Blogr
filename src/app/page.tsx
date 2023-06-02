@@ -2,7 +2,7 @@
 import Designed from "@/components/Designed/Designed";
 import Hero from "@/components/Hero/Hero";
 import Infrastrucure from '@/components/Infrastructure/Infrastructure';
-import Outro from "@/components/Outro";
+import Tooling from '@/components/Tooling/Tooling';
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
       <Hero />
       <Designed />
       <Infrastrucure />
+      <Tooling />
     </main>
   );
 }
