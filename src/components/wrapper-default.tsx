@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   max-width: 120rem;
   padding: 5rem 2rem 3rem;
   margin-inline: auto;
-  border: 1px solid green;
 `;
 
 interface WrapperDefaultProps {

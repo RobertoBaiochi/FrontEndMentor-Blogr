@@ -1,4 +1,4 @@
-import MenuIcon from "./icons/icon-menu";
+import MenuIcon from "../icons/icon-menu";
 
 export default function MenuButton() {
   return (

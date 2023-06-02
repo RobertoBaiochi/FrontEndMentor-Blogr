@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import WrapperDefault from "./wrapper-default";
-import ButtonStyled from "./styled-button";
+import WrapperDefault from "../wrapper-default";
+import ButtonStyled from "../styled-button";
 
 const bgHeroImg = "../../assets/images/bg-pattern-intro-mobile.svg";
 
@@ -17,7 +17,6 @@ const HeroSection = styled.section`
   background-repeat: no-repeat;
   background-position: 40% 40%;
   background-size: 380%;
-  border: 1px solid black;
 `;
 
 const ContentWrapper = styled.div`
