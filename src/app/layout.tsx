@@ -2,6 +2,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 import "./globals.css";
 import { Overpass } from "next/font/google";
 import { DefaultProviders } from "@/Providers/default-providers";
+import Header from "@/components/Header";
 
 const overpass = Overpass({ weight: ["300", "600"], subsets: ["latin"] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={overpass.className}>
         <StyledComponentsRegistry>
-          <DefaultProviders>{children}</DefaultProviders>
+          <DefaultProviders>
+            <Header />
+            {children}
+          </DefaultProviders>
         </StyledComponentsRegistry>
       </body>
     </html>

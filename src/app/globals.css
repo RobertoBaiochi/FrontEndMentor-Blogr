@@ -36,6 +36,7 @@ button {
   outline: transparent;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 a {

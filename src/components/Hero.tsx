@@ -1,22 +1,24 @@
 import { styled } from "styled-components";
-import WrapperDefault from "../wrapper-default";
-import Header from "../Header";
-import ButtonStyled from '../styled-button';
+import WrapperDefault from "./wrapper-default";
+import ButtonStyled from "./styled-button";
 
-const bgHeroImg = '../../assets/images/bg-pattern-intro-mobile.svg'
+const bgHeroImg = "../../assets/images/bg-pattern-intro-mobile.svg";
 
 const HeroSection = styled.section`
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   border-radius: 0 0 0 10rem;
-  background-image: url(${bgHeroImg}), linear-gradient(180deg, var(--intro-grd1), var(--intro-grd2));
+  background-image: url(${bgHeroImg}),
+    linear-gradient(180deg, var(--intro-grd1), var(--intro-grd2));
   background-repeat: no-repeat;
   background-position: 40% 40%;
   background-size: 380%;
-  `;
+  border: 1px solid black;
+`;
 
 const ContentWrapper = styled.div`
   width: 100%;
@@ -35,7 +37,7 @@ const ContentWrapper = styled.div`
     color: var(--white-text);
   }
 
-  h2 {
+  h3 {
     font-weight: 500;
     font-size: 2rem;
     line-height: 2rem;
@@ -55,16 +57,15 @@ const ButtonWrapper = styled.div`
 export default function Hero() {
   return (
     <HeroSection>
-      <Header />
       <WrapperDefault>
         <ContentWrapper>
-            <h1>A modern publishing platform</h1>
-            <h2>Grow your audience and build your online brand</h2>
+          <h1>A modern publishing platform</h1>
+          <h3>Grow your audience and build your online brand</h3>
 
-            <ButtonWrapper>
-              <ButtonStyled text='Start for Free' link='/'/>
-              <ButtonStyled text='Learn More' withBackground={false} link='/'/>
-            </ButtonWrapper>
+          <ButtonWrapper>
+            <ButtonStyled text="Start for Free" link="/" />
+            <ButtonStyled text="Learn More" withBackground={false} link="/" />
+          </ButtonWrapper>
         </ContentWrapper>
       </WrapperDefault>
     </HeroSection>
