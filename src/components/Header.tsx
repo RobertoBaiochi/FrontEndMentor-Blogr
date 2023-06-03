@@ -11,12 +11,13 @@ const HeaderContainer = styled.header`
     left: 50%;
     transform: translateX(-50%);
     overflow-y: hidden;
-    padding: 5rem 2rem 3rem;
+    padding: 2rem 2rem 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    @media ${theme.media.tabletBreackpoint} {
+    @media ${theme.media.smartphoneBreakpoint} {
+      padding: 5rem 2rem 3rem;
     }
   `};
 `;

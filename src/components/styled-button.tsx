@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { styled, css, DefaultTheme } from "styled-components";
+import { Ubuntu } from 'next/font/google';
+
+const ubuntu = Ubuntu({weight: ['400', '500', '700'], subsets: ['latin'] })
 
 interface StyledButtonProps {
   text: string;
@@ -32,15 +35,14 @@ const StyledButton = styled.button<withBackgroundProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-
     
     a {
-      padding: 1.5rem 2rem;
+      padding: 1rem 1.5rem;
       border-radius: 3rem;
       border: 2px solid var(--white-text);
       color: var(--white-text);   
-      font-size: 1.8rem;
-      font-weight: bold;
+      font-size: 1.6rem;
+      font-weight: 700;
       transition: all 300ms ease-in-out;
 
       @media(hover:hover) {
@@ -48,6 +50,11 @@ const StyledButton = styled.button<withBackgroundProps>`
           background: var(--white-text);
           color: var(--hover-bg);
         }
+      }
+
+      @media ${theme.media.smartphoneBreakpoint} {
+        padding: 1.5rem 2rem;
+        font-size: 1.8rem;
       }
     }
 
@@ -58,7 +65,7 @@ const StyledButton = styled.button<withBackgroundProps>`
 export default function ButtonStyled({ text, withBackground, link }: StyledButtonProps) {
   return (
     <StyledButton withBackground={withBackground}>
-      <Link href={link}>{text}</Link>
+      <Link className={ubuntu.className} href={link}>{text}</Link>
     </StyledButton>
   );
 }

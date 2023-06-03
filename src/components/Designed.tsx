@@ -25,7 +25,7 @@ const ContainerGrid = styled.div`
 
 const ImgGrid = styled.img`
   width: 100%;
-  margin: 2rem auto;
+  margin: 4rem auto;
   transform: scale(1.2);
 `;
 

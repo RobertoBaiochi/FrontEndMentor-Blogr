@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 import WrapperDefault from "./wrapper-default";
 import ButtonStyled from "./styled-button";
 
@@ -20,37 +20,66 @@ const HeroSection = styled.section`
 `;
 
 const ContentWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  ${({ theme }) => css`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 
-  h1 {
-    font-size: 3.7rem;
-    font-weight: 900;
-    margin: 3rem auto;
-    line-height: 5rem;
+    h3 {
+
+    }
+  `};
+`;
+
+const HeroTitle = styled.h1`
+  ${({ theme }) => css`
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 5rem auto 2rem;
+    line-height: 4rem;
     color: var(--white-text);
-  }
 
-  h3 {
+    @media ${theme.media.smartphoneBreakpoint} {
+      font-size: 3.7rem;
+      margin: 3rem auto;
+      line-height: 5rem;
+    }
+
+  `};
+`;
+
+const HeroSubTitle = styled.h3`
+  ${({ theme }) => css`
     font-weight: 500;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
     color: var(--white-text);
-  }
+
+    @media ${theme.media.smartphoneBreakpoint} {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  `};
 `;
 
 const ButtonWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin: 6rem auto;
+  ${({ theme }) => css`
+  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 6rem auto 3rem;
+
+    @media ${theme.media.smartphoneBreakpoint} {
+      
+    }
+
+  `};
 `;
 
 export default function Hero() {
@@ -58,8 +87,8 @@ export default function Hero() {
     <HeroSection>
       <WrapperDefault>
         <ContentWrapper>
-          <h1>A modern publishing platform</h1>
-          <h3>Grow your audience and build your online brand</h3>
+          <HeroTitle>A modern publishing platform</HeroTitle>
+          <HeroSubTitle>Grow your audience and build your online brand</HeroSubTitle>
 
           <ButtonWrapper>
             <ButtonStyled text="Start for Free" link="/" />
