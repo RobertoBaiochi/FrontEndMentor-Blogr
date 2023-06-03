@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { styled } from "styled-components";
-import WrapperDefault from "../wrapper-default";
+import WrapperDefault from "./wrapper-default";
 
 const bgImgCircle = "/assets/images/bg-pattern-circles.svg";
 const phones = "/assets/images/illustration-phones.svg";
@@ -15,7 +15,6 @@ const InfrastrucureSection = styled.section`
   background-position: 45% 300%;
   border-radius: 0 10rem 0 10rem;
   margin-top: 15rem;
-  
 `;
 
 const GridContainer = styled.div`
@@ -27,15 +26,12 @@ const GridContainer = styled.div`
   place-content: center;
   grid-template-columns: 1fr;
   transform: translateY(-32%);
-  
 `;
 
 const ImgContainer = styled.div`
   width: 100%;
-  
 
   img {
-    object-fit: contain;
     transform: scale(1.2);
   }
 `;
@@ -58,28 +54,24 @@ const TextContainer = styled.div`
   }
 `;
 
-
-
 export default function Infrastrucure() {
   return (
     <InfrastrucureSection>
       <WrapperDefault>
         <GridContainer>
-
-        <ImgContainer>
-          <img src={phones} alt="phones" />
-        </ImgContainer>
+          <ImgContainer>
+            <img src={phones} alt="phones" />
+          </ImgContainer>
 
           <TextContainer>
             <h2>State of the Art Infrastructure</h2>
             <p>
               With reliability and speed in mind, worldwide data centers provide
               the backbone for ultra-fast connectivity. This ensures your site
-              will load instantly, no matter where your readers are, keeping your
-              site competitive.
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
             </p>
           </TextContainer>
-
         </GridContainer>
       </WrapperDefault>
     </InfrastrucureSection>
@@ -117,7 +109,7 @@ export default function Infrastrucure() {
 //   color: var(--white-text);
 
 //   margin-top: 6rem;
-  
+
 //   h2 {
 //     font-size: 4rem;
 //     margin-bottom: 2rem;

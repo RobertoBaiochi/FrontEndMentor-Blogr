@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import WrapperDefault from "../wrapper-default";
-import ContentText from "../content-text";
+import WrapperDefault from "./wrapper-default";
+import ContentText from "./content-text";
 
 const imgLaptopMobile = "/assets/images/illustration-laptop-mobile.svg";
 

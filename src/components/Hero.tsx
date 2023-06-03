@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import WrapperDefault from "../wrapper-default";
-import ButtonStyled from "../styled-button";
+import WrapperDefault from "./wrapper-default";
+import ButtonStyled from "./styled-button";
 
 const bgHeroImg = "../../assets/images/bg-pattern-intro-mobile.svg";
 

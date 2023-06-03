@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import WrapperDefault from "../wrapper-default";
-import ContentText from "../content-text";
+import WrapperDefault from "./wrapper-default";
+import ContentText from "./content-text";
 
 const imgEditorMobile = "/assets/images/illustration-editor-mobile.svg";
 
@@ -62,7 +62,6 @@ export default function Designed() {
               categories, sections, format, or flow. With this functionality,
               you’re in full control."
             />
-
           </TextContainer>
         </ContainerGrid>
       </WrapperDefault>
