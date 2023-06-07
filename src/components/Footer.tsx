@@ -4,7 +4,7 @@ import { Ubuntu } from "next/font/google";
 
 import WrapperDefault from "./wrapper-default";
 import LogoLink from "./logo-button";
-import ListWithTitle from './list-with-title';
+import ListWithTitle from './list-with-title-footer';
 import ListItemLink from './listitem-link';
 
 const ubunto = Ubuntu({ weight: ["400", "500", "700"], subsets: ["latin"] });

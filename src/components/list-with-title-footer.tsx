@@ -7,7 +7,7 @@ const ListContainer = styled.div`
   `};
 `;
 
-const ListTitle = styled.h5`
+const ListButton = styled.h5`
   ${({ theme }) => css`
     font-size: 1.8rem;
     font-weight: 500;
@@ -32,7 +32,7 @@ interface ListWithTitleProps {
 export default function ListWithTitle({ title, children }: ListWithTitleProps) {
   return (
     <ListContainer>
-      <ListTitle>{title}</ListTitle>
+      <ListButton>{title} </ListButton>
       <UList>
         {children}
       </UList>

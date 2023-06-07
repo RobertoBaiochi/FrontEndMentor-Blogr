@@ -1,4 +1,4 @@
-export default function MenuIcon() {
+export default function OpenMenuIcon() {
   return (
     <svg width="32" height="18" xmlns="http://www.w3.org/2000/svg">
       <g fill="#FFF" fill-rule="evenodd">

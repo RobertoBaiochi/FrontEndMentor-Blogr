@@ -1,17 +1,17 @@
 import { styled, css } from "styled-components";
 import WrapperDefault from "./wrapper-default";
 import ButtonStyled from "./styled-button";
+import Header from './Header';
 
-const bgHeroImgMobile = "../../assets/images/bg-pattern-intro-mobile.svg";
-const bgHeroImgDesktop = "../../assets/images/bg-pattern-intro-desktop.svg";
+const bgHeroImgMobile = "/assets/images/bg-pattern-intro-mobile.svg";
+const bgHeroImgDesktop = "/assets/images/bg-pattern-intro-desktop.svg";
 
-const HeroSection = styled.section`
+const HeroSection = styled.article`
   ${({ theme }) => css`
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     border-radius: 0 0 0 10rem;
     background-image: url(${bgHeroImgMobile}),
@@ -30,9 +30,14 @@ const HeroSection = styled.section`
   `};
 `;
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled.main`
   ${({ theme }) => css`
     width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-inline: auto;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,7 +56,7 @@ const HeroTitle = styled.h1`
 
     @media ${theme.media.smartphoneBreakpoint} {
       font-size: 3.7rem;
-      margin: 3rem auto;
+      margin-top: 3rem ;
       line-height: 5rem;
     }
 
@@ -83,7 +88,6 @@ const HeroSubTitle = styled.h3`
 
 const ButtonWrapper = styled.div`
   ${({ theme }) => css`
-  
     width: 100%;
     display: flex;
     align-items: center;
@@ -97,8 +101,10 @@ const ButtonWrapper = styled.div`
 export default function Hero() {
   return (
     <HeroSection>
-      <WrapperDefault>
-        <ContentWrapper>
+        <Header />
+
+      <ContentWrapper>
+        <WrapperDefault>
           <HeroTitle>A modern publishing platform</HeroTitle>
           <HeroSubTitle>Grow your audience and build your online brand</HeroSubTitle>
 
@@ -106,8 +112,8 @@ export default function Hero() {
             <ButtonStyled text="Start for Free" link="/" />
             <ButtonStyled text="Learn More" withBackground={false} link="/" />
           </ButtonWrapper>
-        </ContentWrapper>
-      </WrapperDefault>
+        </WrapperDefault>
+      </ContentWrapper>
     </HeroSection>
   );
 }

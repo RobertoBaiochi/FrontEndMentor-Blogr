@@ -7,7 +7,7 @@ const ListItem = styled.li`
   `};
 `;
 
-const ItemLink = styled(Link)`
+export const ItemLink = styled(Link)`
   ${({ theme }) => css`
     color: var(--footer-text);
   `};

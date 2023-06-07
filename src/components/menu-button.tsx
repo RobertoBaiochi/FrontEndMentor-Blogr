@@ -1,9 +1,30 @@
-import MenuIcon from "./icons/icon-menu";
+import { MouseEventHandler } from 'react';
+import { styled, css } from 'styled-components';
+import OpenMenuIcon from "./icons/icon-menu";
+import CloseMenuIcon from './icons/icon-close';
 
-export default function MenuButton() {
+const ButtonMenu = styled.button`
+  ${({ theme }) => css`
+    display: grid;
+    place-content: center;
+
+
+    ${theme.media.tabletBreakpoint} {
+      display: none;
+    }
+  `};
+`;
+
+interface MenuButtonProps { 
+  onClick: MouseEventHandler;
+  isVisible: boolean;
+}
+
+export default function MenuButton({ onClick, isVisible }: MenuButtonProps) {
   return (
-    <button>
-      <MenuIcon />
-    </button>
+    <ButtonMenu onClick={onClick}>
+      {!isVisible && <OpenMenuIcon />}
+      {isVisible && <CloseMenuIcon />}
+    </ButtonMenu>
   );
 }
