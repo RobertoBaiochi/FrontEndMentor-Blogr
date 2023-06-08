@@ -20,6 +20,13 @@ const HeroSection = styled.article`
     background-position: 40% 40%;
     background-size: 380%;
 
+    @media ${theme.media.tabletBreakpoint} {
+      background-image: url(${bgHeroImgDesktop}),
+      linear-gradient(90deg, var(--intro-grd1), var(--intro-grd2) 60%);
+      background-repeat: no-repeat;
+      background-position: 35% 40%;
+      background-size: 280%;
+    }
 
     @media ${theme.media.desktopBreakpoint} {
       background-image: url(${bgHeroImgDesktop}),
@@ -60,6 +67,10 @@ const HeroTitle = styled.h1`
       line-height: 5rem;
     }
 
+    @media ${theme.media.tabletBreakpoint} {
+      font-size: 5rem;
+    }
+
     @media ${theme.media.desktopBreakpoint} {
       font-size: 6.5rem;
     }
@@ -77,6 +88,11 @@ const HeroSubTitle = styled.h3`
     @media ${theme.media.smartphoneBreakpoint} {
       font-size: 2rem;
       line-height: 2rem;
+    }
+
+    @media ${theme.media.tabletBreakpoint} {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
     }
 
     @media ${theme.media.desktopBreakpoint} {

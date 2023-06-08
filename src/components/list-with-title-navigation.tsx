@@ -32,6 +32,11 @@ const ListContainer = styled.div`
         font-size: 2.2rem;
         font-weight: 700;
       }
+
+      @media ${theme.media.desktopBreakpoint} {
+        position: relative;
+        top: 2rem;
+      }
     }
 
     @media (hover: hover) {
@@ -47,6 +52,13 @@ const ListContainer = styled.div`
         color: pink;
       }
     }
+    
+    @media ${theme.media.desktopBreakpoint} {
+      flex-direction: row;
+      margin-bottom: 0;
+      position: relative;
+    }
+
   `};
 `;
 
@@ -61,6 +73,7 @@ const ListTitle = styled.button`
     gap: 1rem;
 
     @media ${theme.media.tabletBreakpoint} {
+
     }
   `};
 `;

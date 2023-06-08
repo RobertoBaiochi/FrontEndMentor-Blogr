@@ -1,5 +1,5 @@
 "use client";
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 import { Ubuntu } from "next/font/google";
 
 import WrapperDefault from "./wrapper-default";
@@ -16,15 +16,23 @@ const FooterContainer = styled.footer`
 `;
 
 const GridContainer = styled.div`
-  width: 100%;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr;
-  margin: 3rem 0;
-  gap: 5rem;
-  text-align: center;
-  font-size: 1.8rem;
-  color: var(--footer-text);
+  ${({ theme }) => css`
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    margin: 3rem 0;
+    gap: 5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--footer-text);
+
+    @media ${theme.media.tabletBreakpoint} {
+      align-items: start;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: left;
+    }
+  `};
 `;
 
 export default function Footer() {
@@ -35,24 +43,24 @@ export default function Footer() {
           <LogoLink />
 
           <ListWithTitle title='Product'>
-            <ListItemLink link='/' item='Overview'/>
-            <ListItemLink link='/' item='Pricing'/>
-            <ListItemLink link='/' item='Marketplace'/>
-            <ListItemLink link='/' item='Features'/>
-            <ListItemLink link='/' item='Integrations'/>
+            <ListItemLink key='Overview-footer' link='/' item='Overview'/>
+            <ListItemLink key='Pricing-footer' link='/' item='Pricing'/>
+            <ListItemLink key='Marketplace-footer' link='/' item='Marketplace'/>
+            <ListItemLink key='Features-footer' link='/' item='Features'/>
+            <ListItemLink key='Integrations-footer' link='/' item='Integrations'/>
           </ListWithTitle>
 
           <ListWithTitle title='Company'>
-            <ListItemLink link='/' item='About'/>
-            <ListItemLink link='/' item='Team'/>
-            <ListItemLink link='/' item='Blog'/>
-            <ListItemLink link='/' item='Careers'/>
+            <ListItemLink key='About-footer' link='/' item='About'/>
+            <ListItemLink key='Team-footer' link='/' item='Team'/>
+            <ListItemLink key='Blog-footer' link='/' item='Blog'/>
+            <ListItemLink key='Careers-footer' link='/' item='Careers'/>
           </ListWithTitle>
 
           <ListWithTitle title='Connect'>
-            <ListItemLink link='/' item='Contact'/>
-            <ListItemLink link='/' item='Newsletter'/>
-            <ListItemLink link='/' item='LinkedIn'/>
+            <ListItemLink key='Contact-footer' link='/' item='Contact'/>
+            <ListItemLink key='Newsletter-footer' link='/' item='Newsletter'/>
+            <ListItemLink key='LinkedIn-footer' link='/' item='LinkedIn'/>
           </ListWithTitle>
 
         </GridContainer>

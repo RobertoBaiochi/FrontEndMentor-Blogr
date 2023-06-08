@@ -7,7 +7,7 @@ const ListContainer = styled.div`
   `};
 `;
 
-const ListButton = styled.h5`
+const ListTitle = styled.h5`
   ${({ theme }) => css`
     font-size: 1.8rem;
     font-weight: 500;
@@ -18,10 +18,10 @@ const ListButton = styled.h5`
 
 const UList = styled.ul`
   ${({theme}) => css`
-    li + li {
-        margin-top: 1rem;
-      }
-  `};
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`};
 `
 
 interface ListWithTitleProps {
@@ -32,7 +32,7 @@ interface ListWithTitleProps {
 export default function ListWithTitle({ title, children }: ListWithTitleProps) {
   return (
     <ListContainer>
-      <ListButton>{title} </ListButton>
+      <ListTitle>{title} </ListTitle>
       <UList>
         {children}
       </UList>
