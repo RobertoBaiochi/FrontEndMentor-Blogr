@@ -7,6 +7,7 @@ const ButtonMenu = styled.button`
   ${({ theme }) => css`
     display: grid;
     place-content: center;
+    z-index: 2;
 
 
     ${theme.media.tabletBreakpoint} {

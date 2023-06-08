@@ -2,13 +2,19 @@ import { styled, css } from "styled-components";
 import ListWithTitleHeader from './list-with-title-navigation';
 import ListItemLink from './listitem-link';
 import UserArea from './user-area';
+import { DefaultTheme } from 'styled-components';
 
 interface HeaderNavigationProps {
   menuIsVisible: boolean;
 }
 
-const makeMenuVisible = () => css`
-  display: flex;
+const makeMenuVisible = (theme: DefaultTheme) => css`
+  top: 10rem;
+  opacity: 1;
+
+  @media ${theme.media.smartphoneBreakpoint} {
+      top: 12rem;
+    }
 `;
 
 const Navigation = styled.nav<HeaderNavigationProps>`
@@ -17,16 +23,17 @@ const Navigation = styled.nav<HeaderNavigationProps>`
     background: var(--white-text);
     padding: 3rem;
 
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 1.5rem;
 
     position: absolute;
-    top: 8rem;
+    top: -120vh;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0;
 
     overflow-y: auto;
 
@@ -36,11 +43,9 @@ const Navigation = styled.nav<HeaderNavigationProps>`
 
     z-index: 1;
 
-    @media ${theme.media.smartphoneBreakpoint} {
-      top: 12rem;
-    }
+    transition: all 300ms ease-in-out;
 
-    ${menuIsVisible && makeMenuVisible()}
+    ${menuIsVisible && makeMenuVisible(theme)}
   `};
 `;
 

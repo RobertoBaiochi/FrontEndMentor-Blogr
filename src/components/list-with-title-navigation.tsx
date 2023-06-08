@@ -14,6 +14,7 @@ const ListContainer = styled.div`
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 2rem;
+    
 
     ul {
       width: 100%;
@@ -23,7 +24,6 @@ const ListContainer = styled.div`
       justify-content: center;
       flex-direction: column;
       gap: 2rem;
-      text-align: left;
       padding: 2rem;
       border-radius: 0.5rem;
 

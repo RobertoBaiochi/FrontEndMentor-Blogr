@@ -5,6 +5,25 @@ import WrapperDefault from "./wrapper-default";
 const bgImgCircle = "/assets/images/bg-pattern-circles.svg";
 const phones = "/assets/images/illustration-phones.svg";
 
+// const InfrastrucureSection = styled.section`
+//   ${({ theme }) => css`
+//     width: 100%;
+//     height: 650px;
+//     background-image: url(${bgImgCircle}),
+//       linear-gradient(180deg, var(--body-grd1), var(--body-grd2));
+//     background-repeat: no-repeat;
+//     background-size: 160%;
+//     background-position: 45% -130%;
+//     border-radius: 0 10rem 0 10rem;
+//     margin-top: 15rem;
+
+//     @media ${theme.media.smartphoneBreakpoint} {
+//       background-size: 180%;
+//       background-position: 45% 950%;
+//     }
+//   `};
+// `;
+
 const InfrastrucureSection = styled.section`
   ${({ theme }) => css`
     width: 100%;
@@ -19,7 +38,7 @@ const InfrastrucureSection = styled.section`
 
     @media ${theme.media.smartphoneBreakpoint} {
       background-size: 180%;
-      background-position: 45% 950%;
+      background-position: 45% 305%;
     }
   `};
 `;
