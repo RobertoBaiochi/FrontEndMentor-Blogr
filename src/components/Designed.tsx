@@ -1,38 +1,55 @@
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 import WrapperDefault from "./wrapper-default";
 import ContentText from "./content-text";
 
 const imgEditorMobile = "/assets/images/illustration-editor-mobile.svg";
 
 const DesignedSection = styled.section`
-  width: 100%;
-  min-height: 100vh;
+  ${({ theme }) => css`
+    width: 100%;
+    min-height: 100vh;
 
-  h2 {
-    font-size: 3rem;
-    font-weight: 600;
-    margin: 5rem auto 2rem;
-    text-align: center;
-    color: var(--headings);
-  }
+    h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin: 5rem auto 2rem;
+      text-align: center;
+      color: var(--headings);
+
+      @media ${theme.media.tabletBreakpoint} {
+        font-size: 4rem;
+      }
+    }
+  
+  `};
 `;
 
 const ContainerGrid = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
+  ${({ theme }) => css`
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  `};
 `;
 
 const ImgGrid = styled.img`
-  width: 100%;
-  margin: 4rem auto;
-  transform: scale(1.2);
+  ${({ theme }) => css`
+    width: 100%;
+    margin: 4rem auto;
+  `};
 `;
 
 const TextContainer = styled.div`
-  width: 100%;
-  text-align: center;
-  margin: 2rem auto;
+  ${({ theme }) => css`
+    width: 100%;
+    
+    text-align: center;
+    margin: 2rem auto;
+
+    @media ${theme.media.tabletBreakpoint} {
+      width: 70%;
+    }
+  `};
 `;
 
 export default function Designed() {

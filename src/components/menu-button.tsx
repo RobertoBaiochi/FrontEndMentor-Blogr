@@ -9,8 +9,7 @@ const ButtonMenu = styled.button`
     place-content: center;
     z-index: 2;
 
-
-    ${theme.media.tabletBreakpoint} {
+    @media ${theme.media.desktopBreakpoint} {
       display: none;
     }
   `};

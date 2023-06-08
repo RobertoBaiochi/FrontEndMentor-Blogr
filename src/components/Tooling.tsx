@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 import WrapperDefault from "./wrapper-default";
 import ContentText from "./content-text";
 
@@ -9,22 +9,36 @@ const ToolingSection = styled.section`
 `;
 
 const ContainerGrid = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
+  ${({ theme }) => css`
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  `};
 `;
 
 const ImgGrid = styled.img`
-  width: 100%;
-  object-fit: contain;
-  margin: 4rem auto;
-  transform: scale(1.4);
+  ${({ theme }) => css`
+    width: 100%;
+    object-fit: contain;
+    margin: 4rem auto;
+    transform: scale(1.4);
+
+    @media ${theme.media.tabletBreakpoint} {
+      transform: scale(1.2);
+    }
+  `};
 `;
 
 const TextContainer = styled.div`
-  width: 100%;
-  text-align: center;
-  margin: 2rem auto;
+  ${({ theme }) => css`
+    width: 100%;
+    text-align: center;
+    margin: 2rem auto;
+
+    @media ${theme.media.tabletBreakpoint} {
+      width: 50%;
+    }
+  `};
 `;
 
 export default function Tooling() {

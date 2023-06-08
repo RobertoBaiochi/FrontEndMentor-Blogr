@@ -11,6 +11,13 @@ const UsersContainer = styled.div`
     flex-direction: column;
     gap: 3rem;
     margin-top: 2rem;
+    
+    @media ${theme.media.desktopBreakpoint} { 
+      width: 100%;
+      justify-content: end;
+      flex-direction: row;
+      margin-top: 0;
+    }
   `};
 `;
 
