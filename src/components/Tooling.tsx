@@ -3,9 +3,16 @@ import WrapperDefault from "./wrapper-default";
 import ContentText from "./content-text";
 
 const imgLaptopMobile = "/assets/images/illustration-laptop-mobile.svg";
+const imgLaptopDesktop = "/assets/images/illustration-laptop-desktop.svg";
 
 const ToolingSection = styled.section`
-  width: 100%;
+  ${({ theme }) => css`
+    width: 100%;
+    
+    @media ${theme.media.desktopBreakpoint} {
+      margin: 15rem auto;
+    }
+  `};
 `;
 
 const ContainerGrid = styled.div`
@@ -13,6 +20,18 @@ const ContainerGrid = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
+
+    picture {
+      @media ${theme.media.desktopBreakpoint} {
+        transform: translateX(-35%);
+      }
+    }
+
+    @media ${theme.media.desktopBreakpoint} {
+      grid-template-columns: repeat( 2, 1fr);
+      grid-auto-flow: dense;
+      gap: 5rem;
+    }
   `};
 `;
 
@@ -26,6 +45,10 @@ const ImgGrid = styled.img`
     @media ${theme.media.tabletBreakpoint} {
       transform: scale(1.2);
     }
+
+    @media ${theme.media.desktopBreakpoint} {
+      transform: scale(1.5);
+    }
   `};
 `;
 
@@ -38,6 +61,10 @@ const TextContainer = styled.div`
     @media ${theme.media.tabletBreakpoint} {
       width: 50%;
     }
+
+    @media ${theme.media.desktopBreakpoint} {
+      width: 100%;
+    }
   `};
 `;
 
@@ -46,7 +73,11 @@ export default function Tooling() {
     <ToolingSection>
       <WrapperDefault>
         <ContainerGrid>
-          <ImgGrid src={imgLaptopMobile} />
+
+          <picture>
+            <source srcSet={imgLaptopDesktop} media="(min-width: 913px)" />
+            <ImgGrid src={imgLaptopMobile} />
+          </picture>
 
           <TextContainer>
             <ContentText

@@ -34,7 +34,8 @@ const ListContainer = styled.div`
       }
 
       @media ${theme.media.desktopBreakpoint} {
-        position: relative;
+        position: absolute;
+        z-index: 5;
         top: 2rem;
       }
     }

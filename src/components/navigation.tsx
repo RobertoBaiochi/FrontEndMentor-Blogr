@@ -21,7 +21,7 @@ const Navigation = styled.nav<HeaderNavigationProps>`
   ${({ theme, menuIsVisible }) => css`
     width: calc(100% - 4rem);
     background: var(--white-text);
-    padding: 3rem;
+    
 
     display: flex;
     align-items: center;
@@ -56,6 +56,7 @@ const Navigation = styled.nav<HeaderNavigationProps>`
       transform: translateX(0);
       box-shadow: none;
       overflow-y: hidden;
+      background: red;
 
       display: flex;
       justify-content: space-between;

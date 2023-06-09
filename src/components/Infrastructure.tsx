@@ -15,7 +15,7 @@ const InfrastrucureSection = styled.section`
     background-size: 160%;
     background-position: 45% -130%;
     border-radius: 0 10rem 0 10rem;
-    margin-top: 15rem;
+    margin: 20rem auto 5rem;
 
     @media ${theme.media.smartphoneBreakpoint} {
       background-size: 180%;
@@ -27,6 +27,11 @@ const InfrastrucureSection = styled.section`
       background-position: 45% 100%;
     }
 
+    @media ${theme.media.desktopBreakpoint} {
+      height: 400px;
+      margin: 15rem auto;
+    }
+
   `};
 `;
 
@@ -35,7 +40,6 @@ const GridContainer = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
-
 
     place-content: center;
     grid-template-columns: 1fr;
@@ -47,6 +51,11 @@ const GridContainer = styled.div`
 
     @media ${theme.media.tabletBreakpoint} {
       transform: translateY(-25%);
+    }
+
+    @media ${theme.media.desktopBreakpoint} {
+      transform: translateY(0%);
+      grid-template-columns: repeat(2, 1fr);
     }
   `};
 `;
@@ -65,10 +74,15 @@ const ImgContainer = styled.div`
       @media ${theme.media.tabletBreakpoint} {
         transform: scale(1);
       }
+
     }
 
     @media ${theme.media.tabletBreakpoint} {
       margin: 1rem auto;
+    }
+
+    @media ${theme.media.desktopBreakpoint} {
+
     }
   `};
 `;
@@ -83,6 +97,10 @@ const TextContainer = styled.div`
     flex-direction: column;
     text-align: center;
     color: var(--white-text);
+
+    @media ${theme.media.desktopBreakpoint} {
+      text-align: left;
+    }
   `};
 
 `;
@@ -100,10 +118,18 @@ const InfraTitle = styled.h2`
 
 const InfraText = styled.p`
   ${({ theme }) => css`
-    width: 50%;
+    width: 100%;
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 3rem;
+
+    @media ${theme.media.tabletBreakpoint} {
+      width: 50%;
+    }
+
+    @media ${theme.media.desktopBreakpoint} {
+      width: 100%;
+    }
   `};
 `;
 
