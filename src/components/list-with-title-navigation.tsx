@@ -14,13 +14,14 @@ const ListContainer = styled.div`
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 2rem;
+    position: relative;
 
     ul {
       width: 100%;
       background: hsl(240, 2%, 95%);
       display: none;
-      justify-content: center;
       align-items: center;
+      justify-content: left;
       flex-direction: column;
       gap: 2rem;
       padding: 2rem;
@@ -33,9 +34,10 @@ const ListContainer = styled.div`
       }
 
       @media ${theme.media.desktopBreakpoint} {
+        display: flex;
         position: absolute;
-        z-index: 5;
-        top: 2rem;
+        top: -100vh;
+        left: 0;
       }
     }
 
@@ -51,12 +53,18 @@ const ListContainer = styled.div`
       ${ItemLink}:hover {
         color: pink;
       }
+
+      @media ${theme.media.desktopBreakpoint} {
+        &:hover ul {
+          top: 4rem;
+        }
+      }
     }
 
     @media ${theme.media.desktopBreakpoint} {
+      justify-content: left;
       flex-direction: row;
       margin-bottom: 0;
-      position: relative;
     }
   `};
 `;
@@ -70,9 +78,6 @@ const ListTitle = styled.button`
     font-weight: 700;
     color: var(--headings);
     gap: 1rem;
-
-    @media ${theme.media.tabletBreakpoint} {
-    }
   `};
 `;
 

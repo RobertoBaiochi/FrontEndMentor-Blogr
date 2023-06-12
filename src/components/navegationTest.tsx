@@ -1,5 +1,10 @@
 import { styled, css, DefaultTheme } from "styled-components";
 
+import UserArea from "./user-area";
+
+const arrowDesktop = "/assets/images/icon-arrow-light.svg";
+const arrowMobile = "/assets/images/icon-arrow-dark.svg";
+
 interface NavigationTesteProps {
   menuIsVisible: boolean;
 }
@@ -41,7 +46,7 @@ const NavigationTag = styled.nav<NavigationTesteProps>`
       width: 100%;
       position: static;
       transform: translateX(0%);
-      align-items: start;
+      align-items: center;
       justify-content: space-between;
       flex-direction: row;
       background: red;
@@ -58,13 +63,20 @@ const UlTag = styled.ul`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 2rem;
+    pointer-events: all;
 
     li {
       position: relative;
+      background: blue;
 
       @media (hover: hover) {
         &:hover ${UlTagInside} {
           display: flex;
+        }
+
+        &:hover img {
+          transform: rotate(180deg);
         }
       }
 
@@ -84,7 +96,17 @@ const UlTag = styled.ul`
 
 const UlTitle = styled.button`
   ${({ theme }) => css`
-    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--headings);
+    gap: 0.5rem;
+
+    @media ${theme.media.desktopBreakpoint} {
+      color: var(--white-text);
+    }
   `};
 `;
 
@@ -95,14 +117,27 @@ const UlTagInside = styled.ul`
     align-items: center;
     justify-content: left;
     flex-direction: column;
-
-    position: static;
+    gap: 1rem;
 
     @media ${theme.media.desktopBreakpoint} {
+      width: 130px;
       display: flex;
       position: absolute;
       top: -100vh;
       left: 0;
+      background: var(--white-text);
+    }
+  `};
+`;
+
+const Divisor = styled.span`
+  ${({ theme }) => css`
+    width: 100%;
+    height: 1px;
+    background: var(--footer-text);
+
+    @media ${theme.media.desktopBreakpoint} {
+      display: none;
     }
   `};
 `;
@@ -112,7 +147,13 @@ export function NavegationTeste({ menuIsVisible }: NavigationTesteProps) {
     <NavigationTag menuIsVisible={menuIsVisible}>
       <UlTag>
         <li>
-          <UlTitle>Teste 1</UlTitle>
+          <UlTitle>
+            <p>Teste 1</p>
+            <picture>
+              <source srcSet={arrowDesktop} media="(min-width: 567px)" />
+              <img src={arrowMobile} alt="arrow" />
+            </picture>
+          </UlTitle>
           <UlTagInside>
             <li>Teste 1 A</li>
             <li>Teste 1 B</li>
@@ -121,7 +162,13 @@ export function NavegationTeste({ menuIsVisible }: NavigationTesteProps) {
         </li>
 
         <li>
-          <UlTitle>Teste 2</UlTitle>
+          <UlTitle>
+            <p>Teste 2</p>
+            <picture>
+              <source srcSet={arrowDesktop} media="(min-width: 567px)" />
+              <img src={arrowMobile} alt="arrow" />
+            </picture>
+          </UlTitle>
           <UlTagInside>
             <li>Teste 2 A</li>
             <li>Teste 2 B</li>
@@ -129,7 +176,13 @@ export function NavegationTeste({ menuIsVisible }: NavigationTesteProps) {
           </UlTagInside>
         </li>
         <li>
-          <UlTitle>Teste 3</UlTitle>
+          <UlTitle>
+            <p>Teste 3</p>
+            <picture>
+              <source srcSet={arrowDesktop} media="(min-width: 567px)" />
+              <img src={arrowMobile} alt="arrow" />
+            </picture>
+          </UlTitle>
           <UlTagInside>
             <li>Teste 3 A</li>
             <li>Teste 3 B</li>
@@ -138,12 +191,9 @@ export function NavegationTeste({ menuIsVisible }: NavigationTesteProps) {
         </li>
       </UlTag>
 
-      <div></div>
+      <Divisor />
 
-      <div>
-        <button>Botão 1</button>
-        <button>Botão 2</button>
-      </div>
+      <UserArea />
     </NavigationTag>
   );
 }

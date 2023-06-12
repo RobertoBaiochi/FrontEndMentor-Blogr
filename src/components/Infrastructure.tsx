@@ -27,7 +27,7 @@ const InfrastrucureSection = styled.section`
     }
 
     @media ${theme.media.desktopBreakpoint} {
-      height: 350px;
+      height: 450px;
       background-size: auto;
       background-position: -50% 80%;
       margin: 10rem auto;
@@ -70,10 +70,22 @@ const ImgContainer = styled.div`
       @media ${theme.media.tabletBreakpoint} {
         transform: scale(1);
       }
+
+      @media ${theme.media.desktopBreakpoint} {
+        width: 100%;
+        object-fit: cover;
+      }
     }
 
     @media ${theme.media.tabletBreakpoint} {
       margin: 1rem auto;
+    }
+
+    @media ${theme.media.desktopBreakpoint} {
+      margin: 2.3rem auto 0;
+      display: flex;
+      align-items: start;
+      justify-content: center;
     }
   `};
 `;

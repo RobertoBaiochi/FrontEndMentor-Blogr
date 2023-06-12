@@ -31,7 +31,7 @@ const Navigation = styled.nav<HeaderNavigationProps>`
     transform: translateX(-50%);
     opacity: 0;
 
-    /* overflow-y: auto; */
+    overflow-y: auto;
 
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
@@ -51,18 +51,15 @@ const Navigation = styled.nav<HeaderNavigationProps>`
       transform: translateX(0);
       box-shadow: none;
       overflow-y: hidden;
-      background: red;
-
-      display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: start;
       flex-direction: row;
       gap: 1.5rem;
     }
   `};
 `;
 
-const GroupList = styled.div`
+const GroupList = styled.ul`
   ${({ theme }) => css`
     width: 100%;
     padding: 3rem;
@@ -71,6 +68,22 @@ const GroupList = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 1.5rem;
+
+    /* li {
+      position: relative;
+
+      @media (hover: hover) {
+        &:hover div {
+          display: flex;
+        }
+      }
+
+      @media ${theme.media.desktopBreakpoint} {
+        &:hover div {
+          top: 4rem;
+        }
+      }
+    } */
 
     @media ${theme.media.desktopBreakpoint} {
       flex-direction: row;
