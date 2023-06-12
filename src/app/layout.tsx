@@ -1,13 +1,8 @@
 import StyledComponentsRegistry from "@/lib/registry";
 import "./globals.css";
-// import { Overpass } from "next/font/google";
-import { Ceviche_One } from "next/font/google";
+
 import { DefaultProviders } from "@/Providers/default-providers";
 import Footer from "@/components/Footer";
-
-// const overpass = Overpass({ weight: ["300", "600"], subsets: ["latin"] });
-// const overpass = Arimo({ weight: ["600"], subsets: ["latin"] });
-const overpass = Ceviche_One({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -21,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={overpass.className}>
+      <body>
         <StyledComponentsRegistry>
           <DefaultProviders>
             {children}
