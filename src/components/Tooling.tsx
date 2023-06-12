@@ -10,7 +10,7 @@ const ToolingSection = styled.section`
     width: 100%;
 
     @media ${theme.media.desktopBreakpoint} {
-      margin: 15rem auto;
+      margin: 10rem auto;
     }
   `};
 `;

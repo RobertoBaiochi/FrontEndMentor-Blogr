@@ -9,22 +9,28 @@ const InfrastrucureSection = styled.section`
   ${({ theme }) => css`
     width: 100%;
     height: 650px;
+
     background-image: url(${bgImgCircle}),
       linear-gradient(180deg, var(--body-grd1), var(--body-grd2));
     background-repeat: no-repeat;
-    background-size: 160%;
-    background-position: 45% -130%;
+    background-size: auto;
+    background-position: 45% 150%;
     border-radius: 0 10rem 0 10rem;
     margin: 20rem auto 5rem;
 
     @media ${theme.media.smartphoneBreakpoint} {
-      background-size: 180%;
-      background-position: 45% 305%;
+      background-position: 45% 150%;
     }
 
     @media ${theme.media.tabletBreakpoint} {
-      background-size: 180%;
-      background-position: 45% 100%;
+      background-position: 50% 130%;
+    }
+
+    @media ${theme.media.desktopBreakpoint} {
+      height: 350px;
+      background-size: auto;
+      background-position: -50% 80%;
+      margin: 10rem auto;
     }
   `};
 `;
@@ -41,6 +47,11 @@ const GridContainer = styled.div`
 
     @media ${theme.media.tabletBreakpoint} {
       transform: translateY(-25%);
+    }
+
+    @media ${theme.media.desktopBreakpoint} {
+      grid-template-columns: repeat(2, 1fr);
+      transform: translateY(0%);
     }
   `};
 `;
@@ -77,6 +88,11 @@ const TextContainer = styled.div`
     flex-direction: column;
     text-align: center;
     color: var(--white-text);
+
+    @media ${theme.media.desktopBreakpoint} {
+      text-align: left;
+      align-items: start;
+    }
   `};
 `;
 

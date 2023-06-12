@@ -8,7 +8,6 @@ const imgEditorDesktop = "/assets/images/illustration-editor-desktop.svg";
 const DesignedSection = styled.section`
   ${({ theme }) => css`
     width: 100%;
-    min-height: 100vh;
     margin: 5rem auto;
 
     h2 {
@@ -24,7 +23,7 @@ const DesignedSection = styled.section`
     }
 
     @media ${theme.media.desktopBreakpoint} {
-      margin: 10rem auto 15rem;
+      margin: 10rem auto;
     }
   `};
 `;
