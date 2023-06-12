@@ -1,7 +1,7 @@
 import { styled, css } from "styled-components";
 import WrapperDefault from "./wrapper-default";
 import ButtonStyled from "./styled-button";
-import Header from './Header';
+import Header from "./Header";
 
 const bgHeroImgMobile = "/assets/images/bg-pattern-intro-mobile.svg";
 const bgHeroImgDesktop = "/assets/images/bg-pattern-intro-desktop.svg";
@@ -22,7 +22,7 @@ const HeroSection = styled.article`
 
     @media ${theme.media.tabletBreakpoint} {
       background-image: url(${bgHeroImgDesktop}),
-      linear-gradient(90deg, var(--intro-grd1), var(--intro-grd2) 60%);
+        linear-gradient(90deg, var(--intro-grd1), var(--intro-grd2) 60%);
       background-repeat: no-repeat;
       background-position: 35% 40%;
       background-size: 280%;
@@ -30,7 +30,7 @@ const HeroSection = styled.article`
 
     @media ${theme.media.desktopBreakpoint} {
       background-image: url(${bgHeroImgDesktop}),
-      linear-gradient(90deg, var(--intro-grd1), var(--intro-grd2) 60%);
+        linear-gradient(90deg, var(--intro-grd1), var(--intro-grd2) 60%);
       background-position: 25% 50%;
       background-size: 230%;
     }
@@ -63,7 +63,7 @@ const HeroTitle = styled.h1`
 
     @media ${theme.media.smartphoneBreakpoint} {
       font-size: 3.7rem;
-      margin-top: 3rem ;
+      margin-top: 3rem;
       line-height: 5rem;
     }
 
@@ -74,7 +74,6 @@ const HeroTitle = styled.h1`
     @media ${theme.media.desktopBreakpoint} {
       font-size: 6.5rem;
     }
-
   `};
 `;
 
@@ -117,12 +116,14 @@ const ButtonWrapper = styled.div`
 export default function Hero() {
   return (
     <HeroSection>
-        <Header />
+      <Header />
 
       <ContentWrapper>
         <WrapperDefault>
           <HeroTitle>A modern publishing platform</HeroTitle>
-          <HeroSubTitle>Grow your audience and build your online brand</HeroSubTitle>
+          <HeroSubTitle>
+            Grow your audience and build your online brand
+          </HeroSubTitle>
 
           <ButtonWrapper>
             <ButtonStyled text="Start for Free" link="/" />

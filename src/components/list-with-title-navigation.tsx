@@ -14,7 +14,6 @@ const ListContainer = styled.div`
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 2rem;
-    
 
     ul {
       width: 100%;
@@ -53,13 +52,12 @@ const ListContainer = styled.div`
         color: pink;
       }
     }
-    
+
     @media ${theme.media.desktopBreakpoint} {
       flex-direction: row;
       margin-bottom: 0;
       position: relative;
     }
-
   `};
 `;
 
@@ -74,7 +72,6 @@ const ListTitle = styled.button`
     gap: 1rem;
 
     @media ${theme.media.tabletBreakpoint} {
-
     }
   `};
 `;

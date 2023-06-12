@@ -8,7 +8,7 @@ const imgLaptopDesktop = "/assets/images/illustration-laptop-desktop.svg";
 const ToolingSection = styled.section`
   ${({ theme }) => css`
     width: 100%;
-    
+
     @media ${theme.media.desktopBreakpoint} {
       margin: 15rem auto;
     }
@@ -28,7 +28,7 @@ const ContainerGrid = styled.div`
     }
 
     @media ${theme.media.desktopBreakpoint} {
-      grid-template-columns: repeat( 2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-auto-flow: dense;
       gap: 5rem;
     }
@@ -73,7 +73,6 @@ export default function Tooling() {
     <ToolingSection>
       <WrapperDefault>
         <ContainerGrid>
-
           <picture>
             <source srcSet={imgLaptopDesktop} media="(min-width: 913px)" />
             <ImgGrid src={imgLaptopMobile} />

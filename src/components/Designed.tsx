@@ -10,7 +10,6 @@ const DesignedSection = styled.section`
     width: 100%;
     min-height: 100vh;
     margin: 5rem auto;
-    
 
     h2 {
       font-size: 3rem;
@@ -27,7 +26,6 @@ const DesignedSection = styled.section`
     @media ${theme.media.desktopBreakpoint} {
       margin: 10rem auto 15rem;
     }
-  
   `};
 `;
 
@@ -44,7 +42,7 @@ const ContainerGrid = styled.div`
     }
 
     @media ${theme.media.desktopBreakpoint} {
-      grid-template-columns: repeat( 2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-auto-flow: dense;
       direction: rtl;
       gap: 5rem;
@@ -60,14 +58,13 @@ const ImgGrid = styled.img`
     @media ${theme.media.desktopBreakpoint} {
       transform: scale(1.5);
     }
-
   `};
 `;
 
 const TextContainer = styled.div`
   ${({ theme }) => css`
     width: 100%;
-    
+
     text-align: center;
     margin: auto;
 
@@ -88,11 +85,10 @@ export default function Designed() {
         <h2>Designed for the future</h2>
 
         <ContainerGrid>
-
-        <picture>
-          <source srcSet={imgEditorDesktop} media="(min-width: 913px)" />
-          <ImgGrid src={imgEditorMobile} />
-        </picture>
+          <picture>
+            <source srcSet={imgEditorDesktop} media="(min-width: 913px)" />
+            <ImgGrid src={imgEditorMobile} />
+          </picture>
 
           <TextContainer>
             <ContentText

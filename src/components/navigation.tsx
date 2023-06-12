@@ -1,8 +1,8 @@
 import { styled, css } from "styled-components";
-import ListWithTitleHeader from './list-with-title-navigation';
-import ListItemLink from './listitem-link';
-import UserArea from './user-area';
-import { DefaultTheme } from 'styled-components';
+import ListWithTitleHeader from "./list-with-title-navigation";
+import ListItemLink from "./listitem-link";
+import UserArea from "./user-area";
+import { DefaultTheme } from "styled-components";
 
 interface HeaderNavigationProps {
   menuIsVisible: boolean;
@@ -13,15 +13,14 @@ const makeMenuVisible = (theme: DefaultTheme) => css`
   opacity: 1;
 
   @media ${theme.media.smartphoneBreakpoint} {
-      top: 12rem;
-    }
+    top: 12rem;
+  }
 `;
 
 const Navigation = styled.nav<HeaderNavigationProps>`
   ${({ theme, menuIsVisible }) => css`
     width: calc(100% - 4rem);
     background: var(--white-text);
-    
 
     display: flex;
     align-items: center;
@@ -46,7 +45,6 @@ const Navigation = styled.nav<HeaderNavigationProps>`
     transition: all 300ms ease-in-out;
 
     ${menuIsVisible && makeMenuVisible(theme)}
-
 
     @media ${theme.media.desktopBreakpoint} {
       width: 100%;
@@ -76,7 +74,7 @@ const GroupList = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 1.5rem;
-    
+
     @media ${theme.media.desktopBreakpoint} {
       flex-direction: row;
       flex-grow: 1;
@@ -96,30 +94,30 @@ const Divisor = styled.span`
   `};
 `;
 
-export default function HeaderNavigation({ menuIsVisible }: HeaderNavigationProps) {
+export default function HeaderNavigation({
+  menuIsVisible,
+}: HeaderNavigationProps) {
   return (
     <Navigation menuIsVisible={menuIsVisible}>
-
       <GroupList>
-        <ListWithTitleHeader title='Product' menuIsVisible={menuIsVisible}>
-          <ListItemLink key='Overview' item='Overview' link='/' />
-          <ListItemLink key='Pricing' item='Pricing' link='/' />
-          <ListItemLink key='Marketplace' item='Marketplace' link='/' />
-          <ListItemLink key='Features' item='Features' link='/' />
-          <ListItemLink key='Integrations' item='Integrations' link='/' />
+        <ListWithTitleHeader title="Product" menuIsVisible={menuIsVisible}>
+          <ListItemLink key="Overview" item="Overview" link="/" />
+          <ListItemLink key="Pricing" item="Pricing" link="/" />
+          <ListItemLink key="Marketplace" item="Marketplace" link="/" />
+          <ListItemLink key="Features" item="Features" link="/" />
+          <ListItemLink key="Integrations" item="Integrations" link="/" />
         </ListWithTitleHeader>
-        <ListWithTitleHeader title='Company' menuIsVisible={menuIsVisible}>
-          <ListItemLink key='About' item='About' link='/' />
-          <ListItemLink key='Team' item='Team' link='/' />
-          <ListItemLink key='Blog' item='Blog' link='/' />
-          <ListItemLink key='Careers' item='Careers' link='/' />
+        <ListWithTitleHeader title="Company" menuIsVisible={menuIsVisible}>
+          <ListItemLink key="About" item="About" link="/" />
+          <ListItemLink key="Team" item="Team" link="/" />
+          <ListItemLink key="Blog" item="Blog" link="/" />
+          <ListItemLink key="Careers" item="Careers" link="/" />
         </ListWithTitleHeader>
-        <ListWithTitleHeader title='Connect' menuIsVisible={menuIsVisible}>
-          <ListItemLink key='Contact' item='Contact' link='/' />
-          <ListItemLink key='Newsletter' item='Newsletter' link='/' />
-          <ListItemLink key='LinkedIn' item='LinkedIn' link='/' />
+        <ListWithTitleHeader title="Connect" menuIsVisible={menuIsVisible}>
+          <ListItemLink key="Contact" item="Contact" link="/" />
+          <ListItemLink key="Newsletter" item="Newsletter" link="/" />
+          <ListItemLink key="LinkedIn" item="LinkedIn" link="/" />
         </ListWithTitleHeader>
-
       </GroupList>
 
       <Divisor />

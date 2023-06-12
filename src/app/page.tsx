@@ -1,4 +1,5 @@
 "use client";
+
 import Designed from "@/components/Designed";
 import Hero from "@/components/Hero";
 import Infrastrucure from "@/components/Infrastructure";
