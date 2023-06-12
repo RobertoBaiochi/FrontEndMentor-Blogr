@@ -19,8 +19,8 @@ const ListContainer = styled.div`
       width: 100%;
       background: hsl(240, 2%, 95%);
       display: none;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       flex-direction: column;
       gap: 2rem;
       padding: 2rem;

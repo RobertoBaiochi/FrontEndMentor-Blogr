@@ -4,6 +4,7 @@ import { styled, css } from "styled-components";
 import LogoLink from "./logo-button";
 import MenuButton from "./menu-button";
 import HeaderNavigation from "./navigation";
+import { NavegationTeste } from "./navegationTest";
 
 const HeaderContainer = styled.header`
   ${({ theme }) => css`
@@ -18,7 +19,7 @@ const HeaderContainer = styled.header`
     padding: 4rem 2rem 0;
 
     @media ${theme.media.smartphoneBreakpoint} {
-      padding: 4rem 2rem;
+      /* padding: 4rem 2rem; */
     }
   `};
 `;
@@ -34,7 +35,8 @@ export default function Header() {
   return (
     <HeaderContainer>
       <LogoLink />
-      <HeaderNavigation menuIsVisible={menuIsVisible} />
+      {/* <HeaderNavigation menuIsVisible={menuIsVisible} /> */}
+      <NavegationTeste menuIsVisible={menuIsVisible} />
       <MenuButton onClick={handleMenuClick} isVisible={menuIsVisible} />
     </HeaderContainer>
   );

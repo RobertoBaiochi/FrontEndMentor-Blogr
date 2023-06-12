@@ -11,10 +11,6 @@ interface HeaderNavigationProps {
 const makeMenuVisible = (theme: DefaultTheme) => css`
   top: 10rem;
   opacity: 1;
-
-  @media ${theme.media.smartphoneBreakpoint} {
-    top: 12rem;
-  }
 `;
 
 const Navigation = styled.nav<HeaderNavigationProps>`
@@ -27,6 +23,7 @@ const Navigation = styled.nav<HeaderNavigationProps>`
     justify-content: center;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 2rem;
 
     position: absolute;
     top: -120vh;
@@ -34,7 +31,7 @@ const Navigation = styled.nav<HeaderNavigationProps>`
     transform: translateX(-50%);
     opacity: 0;
 
-    overflow-y: auto;
+    /* overflow-y: auto; */
 
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
@@ -78,6 +75,7 @@ const GroupList = styled.div`
     @media ${theme.media.desktopBreakpoint} {
       flex-direction: row;
       flex-grow: 1;
+      position: absolute;
     }
   `};
 `;
